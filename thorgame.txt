@@ -1,0 +1,49 @@
+    while (1) {
+        int remaining_turns; // The remaining amount of turns Thor can move. Do not remove this line.
+        cin >> remaining_turns; cin.ignore();
+        if ((initial_tx==light_x) && (initial_ty>light_y)) 
+            {
+                initial_ty-=1;
+                dir="N";
+            }
+        else if ((initial_tx==light_x) && (initial_ty<light_y))
+             {
+                initial_ty+=1;
+                dir="S";
+             }
+        else if ((initial_ty==light_y) && (initial_tx<light_x))
+             {
+                initial_tx+=1;
+                dir="E";
+
+             }
+        else if ((initial_ty==light_y) && (initial_tx>light_x))
+             {
+                initial_tx-=1;
+                dir="W";
+    
+             }
+        else if ((initial_tx>light_x) && (initial_ty>light_y))
+            {
+                initial_tx-=1;
+                initial_ty-=1;
+                dir="SW";
+            }
+        else if ((initial_tx<light_x) && (initial_ty<light_y))
+            {
+                initial_tx+=1;
+                initial_ty+=1;
+                dir="NE";
+            }
+        else if ((initial_tx<light_x) && (initial_ty>light_y))
+            {
+                initial_tx+=1;
+                initial_ty-=1;
+                dir="SE";
+            }
+        else if ((initial_tx>light_x) && (initial_ty<light_y))
+            {
+                initial_tx-=1;
+                initial_ty+=1;
+                dir="NW";
+            }
